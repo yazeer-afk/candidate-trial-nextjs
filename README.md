@@ -22,8 +22,9 @@ Here is the [creative XD designs](https://xd.adobe.com/view/9b96df8b-7468-4806-9
 ![xd dev](src/images/xd-dev.png)
 
 The design consists of a few important sections:
-1. Header with a menu (global sections)
-2. Home banner
+1. Implement the design sections in a component based structure
+2. Header with a menu (global sections)
+3. Home banner
 3. Three column content section
 4. Carousel with a slider. We recommend using [Flickity](https://flickity.metafizzy.co/), but you can use any JavaScript slider carousel here which you are familiar with
 5. Team grid layout
@@ -31,10 +32,10 @@ The design consists of a few important sections:
 
 ** Note: The layout also contain a mobile design to guide you with your responsive development
 
-### 1. Header
+### 2. Header
 The header contains several parts, and they need to be implemented accordingly. It contains a logo, menu and a call to action button. The menu contains a mega menu with additional links and all the header components need to support the mobile menu layouts as well.
 
-### 6. Footer
+### 7. Footer
 The footer contains the footer menu, with a copyright text and social icons with links. The footer links need to support mobile designs and need to change to an accordion on smaller screens.
 
 ## Step 2 -  Instructions
