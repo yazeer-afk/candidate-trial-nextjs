@@ -1,0 +1,20 @@
+@import "../variables.scss";
+
+.btn {
+    height: 3.5rem;
+    min-width: 12rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-weight: bold;
+
+    &.secondary-btn {
+        background-color: $primary-accent;
+        color: $text-color;
+        height: 3rem;
+        min-width: 10rem;
+    }
+}
