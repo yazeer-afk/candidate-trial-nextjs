@@ -83,6 +83,33 @@ h3 {
     }
 }
 
+.carousal-container {
+    padding: 10rem 5rem;
+    background-color: $secondary-color;
+    
+    .content {
+        .custom-carousal {
+            .flickity-page-dots {
+                width: inherit;
+                bottom: 0;
+                left: 0;
+                right: -10rem;
+
+                .dot {
+                    background: $primary-color;
+                }
+            }
+
+            .flickity-button {
+                width: 5rem;
+                height: 5rem;
+                background: transparent;
+                color: $text-color;
+            }
+        }
+    }
+}
+
 .team-container {
     .content {
         display: flex;
