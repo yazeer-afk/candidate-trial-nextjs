@@ -1,12 +1,11 @@
-import React from "react";
 import "./button.component.scss";
 
-export interface MyCompProps {
+export interface ButtonProps {
     label: string;
     secondary?: boolean
 }
 
-const Button = (props: MyCompProps): React.ReactElement => {
+const Button = (props: ButtonProps): React.ReactElement => {
     const { label, secondary = false } = props;
     return <button className={`btn ${secondary ? "secondary-btn": ""}`}>{label}</button>;
 };
