@@ -21,12 +21,6 @@ export default function Home() {
             x2: 40,
             y2: 50,
             x3: 10,
-            // x0: 0,
-            // x1: 20,
-            // y1: 50,
-            // x2: 30,
-            // y2: 50, correct
-            // x3: 10,
         }
     };
 
