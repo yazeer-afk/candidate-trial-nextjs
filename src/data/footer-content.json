@@ -1,0 +1,42 @@
+[
+    {
+        "label": "About",
+        "content": [
+            "About menu item 1",
+            "About menu item 2",
+            "About menu item 3",
+            "About menu item 4",
+            "About menu item 5"
+        ]
+    },
+    {
+        "label": "Services",
+        "content": [
+            "Service menu item 1",
+            "Service menu item 2",
+            "Service menu item 3",
+            "Service menu item 4",
+            "Service menu item 5"
+        ]
+    },
+    {
+        "label": "Footer Links",
+        "content": [
+            "Footer menu item 1",
+            "Footer menu item 2",
+            "Footer menu item 3",
+            "Footer menu item 4",
+            "Footer menu item 5"
+        ]
+    },
+    {
+        "label": "Footer Links",
+        "content": [
+            "Footer menu item 1",
+            "Footer menu item 2",
+            "Footer menu item 3",
+            "Footer menu item 4",
+            "Footer menu item 5"
+        ]
+    }
+]
