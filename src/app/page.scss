@@ -1,51 +1,5 @@
 @import "../variables.scss";
 
-.hero-container {
-    background-image: url('/images/hero-image.png');
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 50rem;
-    row-gap: 2rem;
-
-    h1 {
-        text-align: center;
-        font-size: $header-text;
-    }
-}
-
-.container {
-    padding: 10rem 20rem;
-    line-height: 24px;
-}
-
-.column-container {
-    .content {
-        display: flex;
-        align-items: stretch;
-        column-gap: 3rem;
-
-        .slot {
-            width: 100%;
-            
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                margin-top: 2rem;
-            }
-
-            &.column-slot {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
-        }
-    }
-}
-
 ul {
     margin: 0;
     padding-left: 1rem;
@@ -80,4 +34,59 @@ h3 {
     font-size: $subtitle-text;
     padding: 0;
     margin: 0;
+}
+
+.container {
+    padding: 10rem 20rem;
+    line-height: 24px;
+}
+
+
+.hero-container {
+    background-image: url("/images/hero-image.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50rem;
+    row-gap: 2rem;
+
+    h1 {
+        text-align: center;
+        font-size: $header-text;
+    }
+}
+
+.column-container {
+    .content {
+        display: flex;
+        align-items: stretch;
+        column-gap: 3rem;
+
+        .slot {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                margin-top: 2rem;
+            }
+
+            &.column-slot {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+.team-container {
+    .content {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
 }
