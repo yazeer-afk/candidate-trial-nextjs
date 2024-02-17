@@ -1,9 +1,35 @@
+"use client";
+
 import Image from "next/image";
 import Button from "@/components/Button";
-import "./page.scss";
+import Flickity, { FlickityOptions } from "react-flickity-component";
+
 import TeamMember from "@/components/TeamMember";
 
+import "flickity/css/flickity.css";
+import "./page.scss";
+import CarousalItem from "@/components/CarousalItem";
+
 export default function Home() {
+    const options: FlickityOptions = {
+        wrapAround: true,
+        initialIndex: 1,
+        arrowShape: {
+            x0: 0,
+            x1: 30,
+            y1: 50,
+            x2: 40,
+            y2: 50,
+            x3: 10,
+            // x0: 0,
+            // x1: 20,
+            // y1: 50,
+            // x2: 30,
+            // y2: 50, correct
+            // x3: 10,
+        }
+    };
+
     return (
         <main>
             <section className="hero-container">
@@ -23,7 +49,7 @@ export default function Home() {
                             elite dolore.
                         </h3>
                         <Image
-                            src="/images/column-img.png"
+                            src="/images/column-img-small.png"
                             alt="column image"
                             width={500}
                             height={500}
@@ -67,10 +93,22 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="container">
+            <section className="container carousal-container">
                 <h2>Carousal section</h2>
-                <div className="content"></div>
+                <div className="content">
+                    <Flickity
+                        className="custom-carousal"
+                        options={options}
+                        reloadOnUpdate
+                        static
+                    >
+                        <CarousalItem />
+                        <CarousalItem />
+                        <CarousalItem />
+                    </Flickity>
+                </div>
             </section>
+
             <section className="container team-container">
                 <h2>Team section</h2>
                 <div className="content">
