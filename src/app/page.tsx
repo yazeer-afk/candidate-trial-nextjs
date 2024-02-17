@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "@/components/Button";
 import "./page.scss";
+import TeamMember from "@/components/TeamMember";
 
 export default function Home() {
     return (
@@ -68,9 +69,18 @@ export default function Home() {
 
             <section className="container">
                 <h2>Carousal section</h2>
+                <div className="content"></div>
             </section>
-            <section className="container">
+            <section className="container team-container">
                 <h2>Team section</h2>
+                <div className="content">
+                    <TeamMember />
+                    <TeamMember />
+                    <TeamMember />
+                    <TeamMember />
+                    <TeamMember />
+                    <TeamMember />
+                </div>
             </section>
         </main>
     );
