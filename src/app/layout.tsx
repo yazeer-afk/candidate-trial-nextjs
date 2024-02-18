@@ -8,6 +8,7 @@ import {
     faLinkedin,
     faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 import "./globals.scss";
 import Navbar from "@/components/Navbar";
@@ -24,8 +25,6 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    
-
     return (
         <html lang="en">
             <body className={font.className}>
@@ -47,12 +46,36 @@ export default function RootLayout({
                         <div>Footer links 1</div>
                         <div>Footer links 2</div>
                     </div>
+                    <div className="mobile-menu">
+                        <div className="menu-slot">
+                            <div className="slot-header">
+                                <h4>About</h4>
+                                <FontAwesomeIcon
+                                    icon={faPlus}
+                                    size="xl"
+                                    className="nav-icon"
+                                />
+                            </div>
+                            <div className="slot-content"></div>
+                        </div>
+                        <div className="menu-slot">
+                            <div className="slot-header">
+                                <h4>About</h4>
+                                <FontAwesomeIcon
+                                    icon={faPlus}
+                                    size="xl"
+                                    className="nav-icon"
+                                />
+                            </div>
+                            <div className="slot-content"></div>
+                        </div>
+                    </div>
                     <div className="line" />
                     <div className="footer-glossary">
                         <span>© 2022 Company Inc.</span>
                         <span>Terms and conditions</span>
                         <span>Privacy policy</span>
-                        <span>Privacy policy</span>
+                        <span>Website by atomix</span>
                         <div className="social-icons">
                             <FontAwesomeIcon
                                 icon={faFacebook}
