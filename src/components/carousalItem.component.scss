@@ -1,11 +1,14 @@
+@import "../variables.scss";
+
 .carousal-item {
     display: flex;
     column-gap: 3rem;
     align-items: center;
     padding: 0 15rem;
 
-    .carousal-item, img {
+    .carousal-info, img {
         width: 50%;
+        height: auto;
     }
 
     img {
@@ -14,5 +17,47 @@
 
     p {
         margin: 2rem 0;
+    }
+}
+
+@media (min-width: $xxs) {
+    .carousal-item {
+        padding: 0 1rem;
+        flex-direction: column;
+        row-gap: 2rem;
+        justify-content: center;
+        
+        img, .carousal-info {
+            width: 100%;
+            height: auto;
+        }
+
+        .carousal-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media (min-width: $lg) {
+    .carousal-item {
+        padding: 0 8rem;
+        flex-direction: row;
+
+        img, .carousal-info {
+            width: 50%;
+            height: auto;
+        }
+
+        .carousal-info {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: $xl) {
+    .carousal-item {
+        padding: 0 15rem;
     }
 }
