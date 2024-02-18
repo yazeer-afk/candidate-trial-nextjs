@@ -41,7 +41,6 @@ h3 {
     line-height: 24px;
 }
 
-
 .hero-container {
     background-size: cover;
     display: flex;
@@ -83,7 +82,7 @@ h3 {
 .carousal-container {
     padding: 10rem 5rem;
     background-color: $secondary-color;
-    
+
     .content {
         .custom-carousal {
             .flickity-page-dots {
@@ -141,6 +140,27 @@ h3 {
             row-gap: 2rem;
         }
     }
+
+    .carousal-container {
+        padding: 5rem 2rem 8rem;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .content {
+            .custom-carousal {
+                .flickity-page-dots {
+                    bottom: -3rem;
+                    right: 0rem;
+                }
+
+                .flickity-button {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: $md) {
@@ -155,17 +175,45 @@ h3 {
             margin-top: inherit;
         }
     }
+
+    .carousal-container {
+        padding: 5rem 10rem 8rem;
+    }
 }
 
 @media (min-width: $lg) {
     .hero-container {
         min-height: 50rem;
     }
+
+    .carousal-container {
+        padding: 5rem 3rem;
+
+        .content {
+            .custom-carousal {
+                .flickity-button {
+                    display: block;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: $xl) {
     .container {
         padding: 10rem 20rem;
+    }
+
+    .carousal-container {
+        padding: 10rem 5rem;
+
+        .content {
+            .custom-carousal {
+                .flickity-button {
+                    display: block;
+                }
+            }
+        }
     }
 }
 
@@ -182,6 +230,23 @@ h3 {
 
         .content {
             flex-direction: row;
+        }
+    }
+
+    .carousal-container {
+        h2 {
+            font-size: $title-text;
+        }
+
+        .content {
+            .custom-carousal {
+                .flickity-page-dots {
+                    width: inherit;
+                    bottom: 0;
+                    left: 0;
+                    right: -7rem;
+                }
+            }
         }
     }
 }
