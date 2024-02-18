@@ -1,20 +1,21 @@
+import { ITeamStructure } from "@/data/getData";
 import Image from "next/image";
 import "./teamMember.component.scss";
 
-export interface TeamMember {}
+export interface TeamMember extends ITeamStructure {}
 
-const TeamMember = (props: TeamMember): React.ReactElement => {
+const TeamMember = ({name, img, title}: TeamMember): React.ReactElement => {
     return (
         <div className="member-card">
             <Image
-                src="/images/column-img-small.png"
+                src={img}
                 alt="profile picture"
                 width={500}
                 height={500}
             />
             <div className="info">
-                <h5>Associate</h5>
-                <h4>Kym Williams</h4>
+                <h5>{title}</h5>
+                <h4>{name}</h4>
             </div>
         </div>
     );

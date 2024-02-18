@@ -7,11 +7,12 @@ import CarousalItem from "@/components/CarousalItem";
 
 import "./page.scss";
 import Slider from "@/components/Slider";
-import { getCarousalContent } from "@/data/getData";
+import { getCarousalContent, getTeamContent } from "@/data/getData";
 
 export default async function Home() {
 
     const carousalData = await getCarousalContent();
+    const teamData = await getTeamContent();
 
     const options: FlickityOptions = {
         wrapAround: true,
@@ -34,6 +35,7 @@ export default async function Home() {
     };
 
     const getCarousal = () => carousalData.map(item => <CarousalItem key={item.title} {...item} />)
+    const getTeam = () => teamData.map(item => <TeamMember key={item.id} {...item} /> )
 
     return (
         <main>
@@ -103,9 +105,6 @@ export default async function Home() {
                 <div className="content">
                     <Slider className="custom-carousal" options={options}>
                         {getCarousal()}
-                        {/* <CarousalItem />
-                        <CarousalItem />
-                        <CarousalItem /> */}
                     </Slider>
                 </div>
             </section>
@@ -113,21 +112,14 @@ export default async function Home() {
             <section className="container team-container">
                 <h2>Team section</h2>
                 <div className="content">
-                    <TeamMember />
-                    <TeamMember />
-                    <TeamMember />
-                    <TeamMember />
-                    <TeamMember />
-                    <TeamMember />
+                    {getTeam()}
                 </div>
                 <div className="mobile-content">
                     <Slider
                         className="team-carousal"
                         options={teampOptions}
                     >
-                        <TeamMember />
-                        <TeamMember />
-                        <TeamMember />
+                        {getTeam()}
                     </Slider>
                 </div>
             </section>
