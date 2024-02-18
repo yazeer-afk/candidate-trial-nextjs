@@ -26,10 +26,11 @@ nav {
     position: absolute;
     width: 100%;
     background-color: $secondary-color;
-    padding: 3rem 20rem;
+    padding: 3rem 0;
     display: flex;
     column-gap: 10rem;
     align-items: flex-start;
+    justify-content: center;
 
     img {
         object-fit: cover;
@@ -97,5 +98,21 @@ nav {
         .mobile-nav {
             display: none;
         }
+    }
+
+    .nav-drawer {
+        column-gap: 5rem;
+    }
+}
+
+@media (min-width: $xl) {
+    .nav-drawer {
+        column-gap: 8rem;
+    }
+}
+
+@media (min-width: $xxl) {
+    .nav-drawer {
+        column-gap: 10rem;
     }
 }
