@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Kym Williams",
+        "title": "Managing Director",
+        "img": "/images/team-kym.png"
+    },
+    {
+        "name": "Angus Mitchell",
+        "title": "Associate",
+        "img": "/images/team-angus.png"
+    },
+    {
+        "name": "Anita Payne",
+        "title": "Associate",
+        "img": "/images/team-anita.png"
+    },
+    {
+        "name": "Kym Williams",
+        "title": "Managing Director",
+        "img": "/images/team-kym-dup.png"
+    },
+    {
+        "name": "Amy Cole",
+        "title": "Associate",
+        "img": "/images/team-amy.png"
+    },
+    {
+        "name": "David Brown",
+        "title": "Associate",
+        "img": "/images/team-brown.png"
+    }
+]

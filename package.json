@@ -19,7 +19,8 @@
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-flickity-component": "^4.0.7"
+    "react-flickity-component": "^4.0.7",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@types/node": "^20",

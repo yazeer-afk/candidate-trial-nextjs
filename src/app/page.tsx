@@ -5,10 +5,10 @@ import Button from "@/components/Button";
 import Flickity, { FlickityOptions } from "react-flickity-component";
 
 import TeamMember from "@/components/TeamMember";
+import CarousalItem from "@/components/CarousalItem";
 
 import "flickity/css/flickity.css";
 import "./page.scss";
-import CarousalItem from "@/components/CarousalItem";
 
 export default function Home() {
     const options: FlickityOptions = {
