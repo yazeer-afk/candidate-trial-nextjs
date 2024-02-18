@@ -116,6 +116,10 @@ h3 {
 }
 
 @media (min-width: $xxs) {
+    .container {
+        padding: 5rem 2rem;
+    }
+
     .hero-container {
         background-image: url("/images/hero-image-mobile.png");
         min-height: 53rem;
@@ -125,8 +129,24 @@ h3 {
             margin-top: -8rem;
         }
     }
+
+    .column-container {
+        h2 {
+            text-align: start;
+            font-size: 1.5rem;
+        }
+
+        .content {
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+    }
 }
+
 @media (min-width: $md) {
+    .container {
+        padding: 5rem 10rem;
+    }
     .hero-container {
         background-image: url("/images/hero-image.png");
 
@@ -136,8 +156,32 @@ h3 {
         }
     }
 }
+
 @media (min-width: $lg) {
     .hero-container {
         min-height: 50rem;
+    }
+}
+
+@media (min-width: $xl) {
+    .container {
+        padding: 10rem 20rem;
+    }
+}
+
+@media (min-width: $xxl) {
+    .container {
+        padding: 10rem 20rem;
+    }
+
+    .column-container {
+        h2 {
+            text-align: center;
+            font-size: $title-text;
+        }
+
+        .content {
+            flex-direction: row;
+        }
     }
 }

@@ -87,7 +87,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="container carousal-container">
+            <section className="carousal-container">
                 <h2>Carousal section</h2>
                 <div className="content">
                     <Flickity
