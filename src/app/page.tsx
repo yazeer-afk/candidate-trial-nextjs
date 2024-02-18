@@ -21,7 +21,13 @@ export default function Home() {
             x2: 40,
             y2: 50,
             x3: 10,
-        }
+        },
+    };
+    const teampOptions: FlickityOptions = {
+        wrapAround: true,
+        initialIndex: 1,
+        prevNextButtons: false,
+        percentPosition: false
     };
 
     return (
@@ -112,6 +118,18 @@ export default function Home() {
                     <TeamMember />
                     <TeamMember />
                     <TeamMember />
+                </div>
+                <div className="mobile-content">
+                    <Flickity
+                        className="team-carousal"
+                        options={teampOptions}
+                        reloadOnUpdate
+                        static
+                    >
+                        <TeamMember />
+                        <TeamMember />
+                        <TeamMember />
+                    </Flickity>
                 </div>
             </section>
         </main>

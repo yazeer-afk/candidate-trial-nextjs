@@ -129,10 +129,13 @@ h3 {
         }
     }
 
+    h2 {
+        font-size: 1.5rem;
+    }
+
     .column-container {
         h2 {
             text-align: start;
-            font-size: 1.5rem;
         }
 
         .content {
@@ -144,10 +147,6 @@ h3 {
     .carousal-container {
         padding: 5rem 2rem 8rem;
 
-        h2 {
-            font-size: 1.5rem;
-        }
-
         .content {
             .custom-carousal {
                 .flickity-page-dots {
@@ -157,6 +156,23 @@ h3 {
 
                 .flickity-button {
                     display: none;
+                }
+            }
+        }
+    }
+
+    .team-container {
+        .content {
+            display: none;
+        }
+
+        .mobile-content {
+            .team-carousal {
+                .flickity-page-dots {
+                    bottom: -2.5rem;
+                    .dot {
+                        background: $primary-color;
+                    }
                 }
             }
         }
@@ -215,6 +231,16 @@ h3 {
             }
         }
     }
+
+    .team-container {
+        .content {
+            display: flex;
+        }
+
+        .mobile-content {
+            display: none;
+        }
+    }
 }
 
 @media (min-width: $xxl) {
@@ -222,10 +248,13 @@ h3 {
         padding: 10rem 20rem;
     }
 
+    h2 {
+        font-size: $title-text;
+    }
+
     .column-container {
         h2 {
             text-align: center;
-            font-size: $title-text;
         }
 
         .content {
@@ -234,10 +263,6 @@ h3 {
     }
 
     .carousal-container {
-        h2 {
-            font-size: $title-text;
-        }
-
         .content {
             .custom-carousal {
                 .flickity-page-dots {

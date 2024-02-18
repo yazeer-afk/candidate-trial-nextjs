@@ -21,3 +21,24 @@
         }
     }
 }
+
+@media (min-width: $xxs) {
+    .member-card {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+@media (min-width: $xl) {
+    .member-card {
+        width: 47%;
+        padding: 0;
+    }
+}
+
+@media (min-width: $xxl) {
+    .member-card {
+        width: 31%;
+        padding: 0;
+    }
+}
