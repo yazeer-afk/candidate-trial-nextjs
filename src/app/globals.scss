@@ -18,18 +18,18 @@ body {
         font-weight: inherit;
     }
 
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 3rem;
-        font-weight: 600;
+    // nav {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     padding: 3rem;
+    //     font-weight: 600;
 
-        .menu-container {
-            display: flex;
-            column-gap: 4rem;
-        }
-    }
+    //     .menu-container {
+    //         display: flex;
+    //         column-gap: 4rem;
+    //     }
+    // }
 
     footer {
         padding: 10rem 20rem;
@@ -82,6 +82,26 @@ body {
     section {
         padding: 0 2rem;
     }
+
+    // .nav-drawer {
+    //     position: absolute;
+    //     width: 100%;
+    //     background-color: $secondary-color;
+    //     padding: 3rem 20rem;
+    //     display: flex;
+    //     column-gap: 10rem;
+    //     align-items: flex-start;
+
+    //     img {
+    //         object-fit: cover;
+    //     }
+
+    //     .drawer-slot {
+    //         display: flex;
+    //         flex-direction: column;
+    //         row-gap: 1rem;
+    //     }
+    // }
 
     .logo {
         font-size: 2rem;

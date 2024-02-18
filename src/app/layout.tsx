@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faTwitter, faInstagram, faLinkedin, faYoutube } from "@fortawesome/free-brands-svg-icons";
-
-import Button from "@/components/Button";
+import {
+    faFacebook,
+    faTwitter,
+    faInstagram,
+    faLinkedin,
+    faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
 import "./globals.scss";
+import Navbar from "@/components/Navbar";
 
 const font = Montserrat({ subsets: ["latin"] });
 
@@ -19,20 +24,13 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    
+
     return (
         <html lang="en">
             <body className={font.className}>
                 <header>
-                    <nav>
-                        <span className="logo">COMPANY LOGO</span>
-                        <div className="menu-container">
-                            <span>About</span>
-                            <span>Services</span>
-                            <span>FAQs</span>
-                            <span>News</span>
-                        </div>
-                        <Button label="Contact us" secondary />
-                    </nav>
+                    <Navbar />
                 </header>
                 {children}
                 <footer>
@@ -56,11 +54,26 @@ export default function RootLayout({
                         <span>Privacy policy</span>
                         <span>Privacy policy</span>
                         <div className="social-icons">
-                            <FontAwesomeIcon icon={faFacebook} className="icon" />
-                            <FontAwesomeIcon icon={faTwitter} className="icon" />
-                            <FontAwesomeIcon icon={faInstagram} className="icon" />
-                            <FontAwesomeIcon icon={faLinkedin} className="icon" />
-                            <FontAwesomeIcon icon={faYoutube} className="icon" />
+                            <FontAwesomeIcon
+                                icon={faFacebook}
+                                className="icon"
+                            />
+                            <FontAwesomeIcon
+                                icon={faTwitter}
+                                className="icon"
+                            />
+                            <FontAwesomeIcon
+                                icon={faInstagram}
+                                className="icon"
+                            />
+                            <FontAwesomeIcon
+                                icon={faLinkedin}
+                                className="icon"
+                            />
+                            <FontAwesomeIcon
+                                icon={faYoutube}
+                                className="icon"
+                            />
                         </div>
                     </div>
                 </footer>
