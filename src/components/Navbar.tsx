@@ -48,7 +48,7 @@ const Navbar = (props: NavbarProps): React.ReactElement => {
                 />
             </nav>
             <AnimatePresence>
-                {showNav && (
+                {/* {showNav && ( */}
                     <motion.div
                         initial={{ opacity: 0, y: -30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ const Navbar = (props: NavbarProps): React.ReactElement => {
                             <span>About menu item 4</span>
                         </div>
                     </motion.div>
-                )}
+                {/* )} */}
             </AnimatePresence>
             <AnimatePresence>
                 {showMobileNav && (
