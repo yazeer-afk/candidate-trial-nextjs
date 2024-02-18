@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -25,46 +25,56 @@ const Navbar = ({ content }: NavbarProps): React.ReactElement => {
         setShowMobileNav((prevValue) => !prevValue);
     };
 
+    const lineVariant: Variants = {
+        initial: { width: 0 },
+        animate: { width: "100%" },
+    }
+
     const getTitles = () => {
-        return content.map(item => {
+        return content.map((item) => {
             return (
-                <span
-                    key={item.name}
-                    onMouseEnter={() => {
-                        setShowNav(true);
-                        setSelectedContent(item);
-                    }}
-                    onMouseLeave={() => {
-                        setShowNav(false);
-                        setSelectedContent(null);
-                    }}
-                >
-                    {item.name}
-                </span>
+                <motion.div initial="initial"
+                animate="initial"
+                whileHover="animate" className="menu-item">
+                    <span
+                        key={item.name}
+                        onMouseEnter={() => {
+                            setShowNav(true);
+                            setSelectedContent(item);
+                        }}
+                        onMouseLeave={() => {
+                            setShowNav(false);
+                            setSelectedContent(null);
+                        }}
+                    >
+                        {item.name}
+                    </span>
+                    <motion.div variants={lineVariant} className="underline"></motion.div>
+                </motion.div>
             );
         });
     };
 
     const getDrawerContent = () => {
         if (!selectedContent) {
-            return <></>
+            return <></>;
         }
 
-        return selectedContent.content.map(link => (
+        return selectedContent.content.map((link) => (
             <div key={link.title} className="drawer-slot">
                 <h4>{link.title}</h4>
-                {link.items.map(item => <span key={item}>{item}</span>)}
+                {link.items.map((item) => (
+                    <span key={item}>{item}</span>
+                ))}
             </div>
-        ))
-    }
+        ));
+    };
 
     return (
         <>
             <nav>
                 <span className="logo">COMPANY LOGO</span>
-                <div className="menu-container">
-                    {getTitles()}
-                </div>
+                <div className="menu-container">{getTitles()}</div>
                 <Button label="Contact us" secondary />
                 <FontAwesomeIcon
                     icon={faBars}
@@ -74,7 +84,7 @@ const Navbar = ({ content }: NavbarProps): React.ReactElement => {
                 />
             </nav>
             <AnimatePresence>
-                {(showNav && !!selectedContent) ? (
+                {showNav && !!selectedContent ? (
                     <motion.div
                         initial={{ opacity: 0, y: -30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -89,7 +99,9 @@ const Navbar = ({ content }: NavbarProps): React.ReactElement => {
                         />
                         {getDrawerContent()}
                     </motion.div>
-                ) : <></>}
+                ) : (
+                    <></>
+                )}
             </AnimatePresence>
             <AnimatePresence>
                 {showMobileNav && (

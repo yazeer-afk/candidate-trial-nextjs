@@ -10,6 +10,18 @@ nav {
         display: flex;
         column-gap: 4rem;
 
+        .menu-item {
+            position: relative;
+            .underline {
+                position: absolute;
+                top: 2rem;
+                width: 100%;
+                height: 5px;
+                background-color: $primary-color;
+                border-radius: 1rem;
+            }
+        }
+
         span {
             cursor: pointer;
         }
