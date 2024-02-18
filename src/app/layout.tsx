@@ -10,8 +10,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-import "./globals.scss";
 import Navbar from "@/components/Navbar";
+
+import "./globals.scss";
+import "flickity/css/flickity.css";
 import { getNavContent } from "@/data/getData";
 
 const font = Montserrat({ subsets: ["latin"] });

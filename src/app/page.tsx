@@ -1,16 +1,19 @@
-"use client";
-
 import Image from "next/image";
 import Button from "@/components/Button";
-import Flickity, { FlickityOptions } from "react-flickity-component";
+import { FlickityOptions } from "react-flickity-component";
 
 import TeamMember from "@/components/TeamMember";
 import CarousalItem from "@/components/CarousalItem";
 
-import "flickity/css/flickity.css";
 import "./page.scss";
+import Slider from "@/components/Slider";
+import { getCarousalContent, getTeamContent } from "@/data/getData";
 
-export default function Home() {
+export default async function Home() {
+
+    const carousalData = await getCarousalContent();
+    const teamData = await getTeamContent();
+
     const options: FlickityOptions = {
         wrapAround: true,
         initialIndex: 1,
@@ -23,12 +26,16 @@ export default function Home() {
             x3: 10,
         },
     };
+
     const teampOptions: FlickityOptions = {
         wrapAround: true,
         initialIndex: 1,
         prevNextButtons: false,
-        percentPosition: false
+        percentPosition: false,
     };
+
+    const getCarousal = () => carousalData.map(item => <CarousalItem key={item.title} {...item} />)
+    const getTeam = () => teamData.map(item => <TeamMember key={item.id} {...item} /> )
 
     return (
         <main>
@@ -96,40 +103,24 @@ export default function Home() {
             <section className="carousal-container">
                 <h2>Carousal section</h2>
                 <div className="content">
-                    <Flickity
-                        className="custom-carousal"
-                        options={options}
-                        reloadOnUpdate
-                        static
-                    >
-                        <CarousalItem />
-                        <CarousalItem />
-                        <CarousalItem />
-                    </Flickity>
+                    <Slider className="custom-carousal" options={options}>
+                        {getCarousal()}
+                    </Slider>
                 </div>
             </section>
 
             <section className="container team-container">
                 <h2>Team section</h2>
                 <div className="content">
-                    <TeamMember />
-                    <TeamMember />
-                    <TeamMember />
-                    <TeamMember />
-                    <TeamMember />
-                    <TeamMember />
+                    {getTeam()}
                 </div>
                 <div className="mobile-content">
-                    <Flickity
+                    <Slider
                         className="team-carousal"
                         options={teampOptions}
-                        reloadOnUpdate
-                        static
                     >
-                        <TeamMember />
-                        <TeamMember />
-                        <TeamMember />
-                    </Flickity>
+                        {getTeam()}
+                    </Slider>
                 </div>
             </section>
         </main>

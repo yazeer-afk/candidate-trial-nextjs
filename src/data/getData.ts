@@ -9,6 +9,7 @@ export interface IFooterStructure {
 
 // Team structure --------------------------
 export interface ITeamStructure {
+    id: number;
     name: string;
     title: string;
     img: string;
