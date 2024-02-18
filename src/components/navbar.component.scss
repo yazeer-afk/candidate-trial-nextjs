@@ -9,6 +9,10 @@ nav {
     .menu-container {
         display: flex;
         column-gap: 4rem;
+
+        span {
+            cursor: pointer;
+        }
     }
 
 }
