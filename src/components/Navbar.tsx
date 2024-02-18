@@ -9,35 +9,61 @@ import { faBars, faPlus } from "@fortawesome/free-solid-svg-icons";
 import Button from "./Button";
 
 import "./navbar.component.scss";
+import { INavStructure } from "@/data/getData";
 
-interface NavbarProps {}
+interface NavbarProps {
+    content: INavStructure[];
+}
 
-const Navbar = (props: NavbarProps): React.ReactElement => {
+const Navbar = ({ content }: NavbarProps): React.ReactElement => {
     const [showNav, setShowNav] = useState(false);
+    const [selectedContent, setSelectedContent] =
+        useState<null | INavStructure>(null);
     const [showMobileNav, setShowMobileNav] = useState(false);
 
     const handleMobileNav = () => {
         setShowMobileNav((prevValue) => !prevValue);
     };
 
+    const getTitles = () => {
+        return content.map(item => {
+            return (
+                <span
+                    key={item.name}
+                    onMouseEnter={() => {
+                        setShowNav(true);
+                        setSelectedContent(item);
+                    }}
+                    onMouseLeave={() => {
+                        setShowNav(false);
+                        setSelectedContent(null);
+                    }}
+                >
+                    {item.name}
+                </span>
+            );
+        });
+    };
+
+    const getDrawerContent = () => {
+        if (!selectedContent) {
+            return <></>
+        }
+
+        return selectedContent.content.map(link => (
+            <div key={link.title} className="drawer-slot">
+                <h4>{link.title}</h4>
+                {link.items.map(item => <span key={item}>{item}</span>)}
+            </div>
+        ))
+    }
+
     return (
         <>
             <nav>
                 <span className="logo">COMPANY LOGO</span>
                 <div className="menu-container">
-                    <span
-                        onMouseEnter={() => {
-                            setShowNav(true);
-                        }}
-                        onMouseLeave={() => {
-                            setShowNav(false);
-                        }}
-                    >
-                        About
-                    </span>
-                    <span>Services</span>
-                    <span>FAQs</span>
-                    <span>News</span>
+                    {getTitles()}
                 </div>
                 <Button label="Contact us" secondary />
                 <FontAwesomeIcon
@@ -48,7 +74,7 @@ const Navbar = (props: NavbarProps): React.ReactElement => {
                 />
             </nav>
             <AnimatePresence>
-                {/* {showNav && ( */}
+                {(showNav && !!selectedContent) ? (
                     <motion.div
                         initial={{ opacity: 0, y: -30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -56,27 +82,14 @@ const Navbar = (props: NavbarProps): React.ReactElement => {
                         className="nav-drawer"
                     >
                         <Image
-                            src="/images/column-img-small.png"
+                            src="/images/drawer-img.png"
                             alt="drawer image"
                             width={300}
                             height={400}
                         />
-                        <div className="drawer-slot">
-                            <h4>About</h4>
-                            <span>About menu item 1</span>
-                            <span>About menu item 2</span>
-                            <span>About menu item 3</span>
-                            <span>About menu item 4</span>
-                        </div>
-                        <div className="drawer-slot">
-                            <h4>About</h4>
-                            <span>About menu item 1</span>
-                            <span>About menu item 2</span>
-                            <span>About menu item 3</span>
-                            <span>About menu item 4</span>
-                        </div>
+                        {getDrawerContent()}
                     </motion.div>
-                {/* )} */}
+                ) : <></>}
             </AnimatePresence>
             <AnimatePresence>
                 {showMobileNav && (

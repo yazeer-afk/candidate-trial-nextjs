@@ -2,27 +2,27 @@ import fsPromises from "fs/promises";
 import path from "path";
 
 // Footer structure ------------------------
-interface IFooterStructure {
+export interface IFooterStructure {
     label: string;
     content: string[];
 }
 
 // Team structure --------------------------
-interface ITeamStructure {
+export interface ITeamStructure {
     name: string;
     title: string;
     img: string;
 }
 
 // Carousal structure --------------------------
-interface ICarousalStructure {
+export interface ICarousalStructure {
     title: string;
     description: string;
     img: string;
 }
 
 // Nav structure --------------------------
-interface INavStructure {
+export interface INavStructure {
     name: string;
     img: string;
     content: {

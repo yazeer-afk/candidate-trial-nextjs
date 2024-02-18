@@ -1,7 +1,6 @@
 [
     {
         "name": "About",
-        "img": "/images/carousal-img.png",
         "content": [
             {
                 "title": "About Sample links 1",
@@ -27,7 +26,6 @@
     },
     {
         "name": "Services",
-        "img": "/images/carousal-img.png",
         "content": [
             {
                 "title": "Services Sample links 1",
@@ -53,7 +51,6 @@
     },
     {
         "name": "FAQs",
-        "img": "/images/carousal-img.png",
         "content": [
             {
                 "title": "FAQs Sample links 1",
@@ -79,7 +76,6 @@
     },
     {
         "name": "News",
-        "img": "/images/carousal-img.png",
         "content": [
             {
                 "title": "News Sample links 1",

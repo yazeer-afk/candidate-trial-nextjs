@@ -12,7 +12,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 import "./globals.scss";
 import Navbar from "@/components/Navbar";
-import { getTeamContent } from "@/data/getData";
+import { getNavContent } from "@/data/getData";
 
 const font = Montserrat({ subsets: ["latin"] });
 
@@ -27,11 +27,13 @@ export default async function RootLayout({
     children: React.ReactNode;
 }>) {
 
+    const navContent = await getNavContent();
+
     return (
         <html lang="en">
             <body className={font.className}>
                 <header>
-                    <Navbar />
+                    <Navbar content={navContent} />
                 </header>
                 {children}
                 <footer>
