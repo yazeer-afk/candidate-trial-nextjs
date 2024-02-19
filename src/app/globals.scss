@@ -44,14 +44,22 @@ body {
 
         .mobile-menu {
             width: 100%;
+            overflow-y: hidden;
 
-            .menu-slot {
-                margin-bottom: 1.2rem;
+            .slot-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.6rem 0;
+                background-color: $secondary-color;
+                position: relative;
+                z-index: 1;
+            }
 
-                .slot-header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+            .footer-link {
+                padding: 0 0 0.5rem 1rem;
+                h4 {
+                    font-weight: 500;
                 }
             }
         }

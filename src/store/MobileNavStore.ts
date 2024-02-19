@@ -3,8 +3,8 @@ import { create } from 'zustand';
 interface INavState {
     mainItem: string | undefined;
     subItem: string | undefined;
-    setMainItem: (item: string | undefined) => void;
-    setSubItem: (item: string | undefined) => void;
+    setMainItem: (item: string) => void;
+    setSubItem: (item: string) => void;
 }
 
 const useNavStore = create<INavState>((set) => ({

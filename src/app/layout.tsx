@@ -8,13 +8,13 @@ import {
     faLinkedin,
     faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-import Navbar from "@/components/navbar/Navbar";
+import Navbar from "@/components/Navbar";
 
 import "./globals.scss";
 import "flickity/css/flickity.css";
-import { getNavContent } from "@/data/getData";
+import { getFooterContent, getNavContent } from "@/data/getData";
+import FooterMapper from "@/components/footerTools/FooterMapper";
 
 const font = Montserrat({ subsets: ["latin"] });
 
@@ -30,6 +30,16 @@ export default async function RootLayout({
 }>) {
 
     const navContent = await getNavContent();
+    const footerContent = await getFooterContent();
+
+    const getFooter = () => {
+        return footerContent.map(({label, content}) => (
+            <div key={label} className="menu-slot">
+                <h4>{label}</h4>
+                {content.map(link => (<span>{link}</span>))}
+            </div>
+        ))
+    }
 
     return (
         <html lang="en">
@@ -41,40 +51,10 @@ export default async function RootLayout({
                 <footer>
                     <span className="logo">COMPANY LOGO</span>
                     <div className="footer-menu">
-                        <div className="menu-slot">
-                            <h4>About</h4>
-                            <span>About menu item 1</span>
-                            <span>About menu item 2</span>
-                            <span>About menu item 3</span>
-                            <span>About menu item 4</span>
-                        </div>
-                        <div>Services</div>
-                        <div>Footer links 1</div>
-                        <div>Footer links 2</div>
+                        {getFooter()}
                     </div>
                     <div className="mobile-menu">
-                        <div className="menu-slot">
-                            <div className="slot-header">
-                                <h4>About</h4>
-                                <FontAwesomeIcon
-                                    icon={faPlus}
-                                    size="xl"
-                                    className="nav-icon"
-                                />
-                            </div>
-                            <div className="slot-content"></div>
-                        </div>
-                        <div className="menu-slot">
-                            <div className="slot-header">
-                                <h4>About</h4>
-                                <FontAwesomeIcon
-                                    icon={faPlus}
-                                    size="xl"
-                                    className="nav-icon"
-                                />
-                            </div>
-                            <div className="slot-content"></div>
-                        </div>
+                        <FooterMapper items={footerContent}/>
                     </div>
                     <div className="line" />
                     <div className="footer-glossary">
