@@ -1,4 +1,4 @@
-@import "../variables.module.scss";
+@import "../../variables.module.scss";
 
 nav {
     display: flex;
@@ -63,6 +63,7 @@ nav {
     border-top: 1px solid $primary-accent;
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
 
     .slot {
         padding: 1.5rem 3rem;
