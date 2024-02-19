@@ -2,6 +2,7 @@
 
 .member-card {
     width: 31%;
+    transition: box-shadow 0.5s;
 
     img {
         width: 100%;
@@ -19,6 +20,10 @@
             margin-bottom: 1rem;
             margin: 0 0 0.5rem;
         }
+    }
+
+    &:hover {
+        box-shadow: 0 0 14px 0px #00000051;
     }
 }
 
