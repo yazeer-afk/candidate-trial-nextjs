@@ -71,7 +71,7 @@ const WeatherWidget = (props: WeatherWidgetProps): React.ReactElement => {
                         </div>
                         <div className="info">
                             <h4>Humidity: </h4>
-                            <span>{data.main.humidity}K</span>
+                            <span>{data.main.humidity}%</span>
                         </div>
                     </motion.div>
                 )}
