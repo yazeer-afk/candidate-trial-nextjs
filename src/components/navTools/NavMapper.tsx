@@ -1,9 +1,8 @@
+import React from "react";
 import { INavStructure } from "@/data/getData";
 import useNavStore from "@/store/MobileNavStore";
 import { AnimatePresence, motion } from "framer-motion";
-import React from "react";
 import NavSlot from "./NavSlot";
-import SubSlot from "./SubSlot";
 
 export interface NavMapperProps {
     content: INavStructure[];
@@ -27,7 +26,7 @@ const NavMapper = ({ content }: NavMapperProps): React.ReactElement => {
                             >
                                 {content.map(({ title, items }) => (
                                     <React.Fragment key={title}>
-                                        <SubSlot title={title} />
+                                        <NavSlot label={title} isSubSlot />
                                         <AnimatePresence>
                                             {subItem === title && (
                                                 <motion.div

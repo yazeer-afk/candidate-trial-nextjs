@@ -6,11 +6,11 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-import Button from "../Button";
+import Button from "./Button";
 
 import "./navbar.component.scss";
 import { INavStructure } from "@/data/getData";
-import NavMapper from "./NavMapper";
+import NavMapper from "./navTools/NavMapper";
 
 interface NavbarProps {
     content: INavStructure[];
