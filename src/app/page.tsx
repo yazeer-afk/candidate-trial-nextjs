@@ -34,7 +34,7 @@ export default async function Home() {
         percentPosition: false,
     };
 
-    const getCarousal = () => carousalData.map(item => <CarousalItem key={item.title} {...item} />)
+    const getCarousal = () => carousalData.map(item => <CarousalItem key={item.id} {...item} />)
     const getTeam = () => teamData.map(item => <TeamMember key={item.id} {...item} /> )
 
     return (

@@ -5,6 +5,7 @@ import path from "path";
 export interface IFooterStructure {
     label: string;
     content: string[];
+    id: number;
 }
 
 // Team structure --------------------------
@@ -20,15 +21,18 @@ export interface ICarousalStructure {
     title: string;
     description: string;
     img: string;
+    id: number;
 }
 
 // Nav structure --------------------------
 export interface INavStructure {
+    id: number;
     name: string;
     img: string;
     content: {
         title: string;
         items: string[]
+        contentId: number;
     }[];
 }
 

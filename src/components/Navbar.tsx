@@ -35,7 +35,7 @@ const Navbar = ({ content }: NavbarProps): React.ReactElement => {
         return content.map((item) => {
             return (
                 <motion.div
-                    key={item.name}
+                    key={item.id}
                     initial="initial"
                     animate="initial"
                     whileHover="animate"
