@@ -40,18 +40,16 @@ const Navbar = ({ content }: NavbarProps): React.ReactElement => {
                     animate="initial"
                     whileHover="animate"
                     className="menu-item"
+                    onMouseEnter={() => {
+                        setShowNav(true);
+                        setSelectedContent(item);
+                    }}
+                    onMouseLeave={() => {
+                        setShowNav(false);
+                        setSelectedContent(null);
+                    }}
                 >
-                    <span
-                        key={item.name}
-                        onMouseEnter={() => {
-                            setShowNav(true);
-                            setSelectedContent(item);
-                        }}
-                        onMouseLeave={() => {
-                            setShowNav(false);
-                            setSelectedContent(null);
-                        }}
-                    >
+                    <span>
                         {item.name}
                     </span>
                     <motion.div variants={lineVariant} className="underline" />
@@ -95,6 +93,14 @@ const Navbar = ({ content }: NavbarProps): React.ReactElement => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -30 }}
                         className="nav-drawer"
+                        onMouseEnter={() => {
+                            setShowNav(true);
+                            setSelectedContent(selectedContent);
+                        }}
+                        onMouseLeave={() => {
+                            setShowNav(false);
+                            setSelectedContent(null);
+                        }}
                     >
                         <Image
                             src="/images/drawer-img.png"
