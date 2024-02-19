@@ -14,8 +14,8 @@ const NavMapper = ({ content }: NavMapperProps): React.ReactElement => {
 
     return (
         <>
-            {content.map(({ name, content }) => (
-                <React.Fragment key={name}>
+            {content.map(({ name, content, id }) => (
+                <React.Fragment key={id}>
                     <NavSlot label={name} />
                     <AnimatePresence>
                         {name === mainItem && (
@@ -24,8 +24,8 @@ const NavMapper = ({ content }: NavMapperProps): React.ReactElement => {
                                 animate={{ height: "fit-content" }}
                                 exit={{ height: 0 }}
                             >
-                                {content.map(({ title, items }) => (
-                                    <React.Fragment key={title}>
+                                {content.map(({ title, items, contentId }) => (
+                                    <React.Fragment key={contentId}>
                                         <NavSlot label={title} isSubSlot />
                                         <AnimatePresence>
                                             {subItem === title && (

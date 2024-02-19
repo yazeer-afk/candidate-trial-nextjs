@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "label": "About",
         "content": [
             "About menu item 1",
@@ -10,6 +11,7 @@
         ]
     },
     {
+        "id": 2,
         "label": "Services",
         "content": [
             "Service menu item 1",
@@ -20,6 +22,7 @@
         ]
     },
     {
+        "id": 3,
         "label": "Footer Links 1",
         "content": [
             "Footer menu item 1",
@@ -30,6 +33,7 @@
         ]
     },
     {
+        "id": 4,
         "label": "Footer Links 2",
         "content": [
             "Footer menu item 1",

@@ -33,8 +33,8 @@ export default async function RootLayout({
     const footerContent = await getFooterContent();
 
     const getFooter = () => {
-        return footerContent.map(({label, content}) => (
-            <div key={label} className="menu-slot">
+        return footerContent.map(({label, content, id}) => (
+            <div key={id} className="menu-slot">
                 <h4>{label}</h4>
                 {content.map(link => (<span>{link}</span>))}
             </div>

@@ -15,8 +15,8 @@ const FooterMapper = ({ items }: FooterMapperProps): React.ReactElement => {
 
     return (
         <>
-            {items.map(({ label, content }) => (
-                <React.Fragment key={label}>
+            {items.map(({ label, content, id }) => (
+                <React.Fragment key={id}>
                     <FooterSlot label={label} />
                     <AnimatePresence>
                         {label === selectedItem && (
