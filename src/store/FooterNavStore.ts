@@ -1,13 +1,13 @@
 import { create } from 'zustand';
 
-interface INavState {
+interface IFooterState {
     selectedItem: string | undefined;
-    setSelectedItem: (item: string) => void;
+    setSelectedItem: (item: string | undefined) => void;
 }
 
-const useNavStore = create<INavState>((set) => ({
+const useFooterStore = create<IFooterState>((set) => ({
     selectedItem: undefined,
     setSelectedItem: (item) => set((state) => ({selectedItem: state.selectedItem === item ? undefined: item})),
 }));
 
-export default useNavStore;
+export default useFooterStore;
