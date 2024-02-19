@@ -11,6 +11,7 @@ import Button from "./Button";
 import "./navbar.component.scss";
 import { INavStructure } from "@/data/getData";
 import NavMapper from "./navTools/NavMapper";
+import WeatherWidget from "./WeatherWidget";
 
 interface NavbarProps {
     content: INavStructure[];
@@ -78,6 +79,7 @@ const Navbar = ({ content }: NavbarProps): React.ReactElement => {
             <nav>
                 <span className="logo">COMPANY LOGO</span>
                 <div className="menu-container">{getTitles()}</div>
+                <WeatherWidget />
                 <Button label="Contact us" secondary />
                 <FontAwesomeIcon
                     icon={faBars}
