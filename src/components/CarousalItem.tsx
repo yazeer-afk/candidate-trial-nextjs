@@ -1,7 +1,7 @@
-import { ICarousalStructure } from "@/data/getData";
 import Image from "next/image";
 import Button from "./Button";
 import "./carousalItem.component.scss";
+import { ICarousalStructure } from "@/data/getData";
 
 export interface CarousalItemProps extends ICarousalStructure {}
 

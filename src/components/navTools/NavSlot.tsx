@@ -1,7 +1,9 @@
-import useNavStore from "@/store/MobileNavStore";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import variables from "../../variables.module.scss";
+
+import useNavStore from "@/store/MobileNavStore";
 
 export interface NavSlotProps {
     label: string;
