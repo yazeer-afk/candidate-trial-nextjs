@@ -4,9 +4,10 @@ import { FlickityOptions } from "react-flickity-component";
 
 import TeamMember from "@/components/TeamMember";
 import CarousalItem from "@/components/CarousalItem";
+import Slider from "@/components/Slider";
 
 import "./page.scss";
-import Slider from "@/components/Slider";
+
 import { getCarousalContent, getTeamContent } from "@/data/getData";
 
 export default async function Home() {

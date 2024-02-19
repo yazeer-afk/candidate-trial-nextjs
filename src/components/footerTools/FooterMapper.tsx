@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import { IFooterStructure } from "@/data/getData";
 import FooterSlot from "./FooterSlot";
-import useFooterStore from "@/store/FooterNavStore";
 import { AnimatePresence, motion } from "framer-motion";
+
+import { IFooterStructure } from "@/data/getData";
+import useFooterStore from "@/store/FooterNavStore";
 
 export interface FooterMapperProps {
     items: IFooterStructure[];

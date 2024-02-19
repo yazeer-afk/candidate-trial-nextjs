@@ -1,6 +1,6 @@
-import { ITeamStructure } from "@/data/getData";
 import Image from "next/image";
 import "./teamMember.component.scss";
+import { ITeamStructure } from "@/data/getData";
 
 export interface TeamMember extends ITeamStructure {}
 

@@ -1,8 +1,10 @@
 import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
+
+import NavSlot from "./NavSlot";
+
 import { INavStructure } from "@/data/getData";
 import useNavStore from "@/store/MobileNavStore";
-import { AnimatePresence, motion } from "framer-motion";
-import NavSlot from "./NavSlot";
 
 export interface NavMapperProps {
     content: INavStructure[];
