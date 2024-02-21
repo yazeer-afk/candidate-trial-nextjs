@@ -13,7 +13,8 @@ import Navbar from "@/components/Navbar";
 import FooterMapper from "@/components/footerTools/FooterMapper";
 
 import "./globals.scss";
-import "flickity/css/flickity.css";
+import 'react-multi-carousel/lib/styles.css';
+// import "flickity/css/flickity.css";
 
 import { getFooterContent, getNavContent } from "@/data/getData";
 
