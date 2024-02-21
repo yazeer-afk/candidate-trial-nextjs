@@ -1,0 +1,45 @@
+@import "../variables.module.scss";
+
+.react-multi-carousel-dot-list {
+    column-gap: 0.3rem;
+    // left: 0;
+    bottom: auto;
+    margin-top: 2rem;
+
+    button {
+        border: none;
+    }
+
+    .react-multi-carousel-dot--active button {
+        background: $primary-color;
+        opacity: 100% !important;
+    }
+
+    .react-multi-carousel-dot button {
+        background: $primary-color;
+        opacity: 30%;
+    }
+}
+
+.react-multiple-carousel__arrow {
+    background-color: transparent;
+    position: absolute;
+
+    &::before {
+        color: $primary-color;
+        font-size: 5rem;
+    }
+
+    &:focus,
+    &:hover {
+        background: none;
+    }
+
+    &.react-multiple-carousel__arrow--left {
+        left: 0;
+    }
+
+    &.react-multiple-carousel__arrow--right {
+        right: 0;
+    }
+}

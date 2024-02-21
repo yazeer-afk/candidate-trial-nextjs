@@ -1,23 +1,5 @@
 @import "../variables.module.scss";
 
-ul {
-    margin: 0;
-    padding-left: 1rem;
-    list-style-type: none;
-
-    li::before {
-        content: "\276F";
-        color: $primary-color;
-        font-weight: bold;
-        margin-right: 0.5em;
-        margin-left: -1rem;
-    }
-
-    li {
-        padding-bottom: 0.3rem;
-    }
-}
-
 p {
     margin: 0;
     padding: 0;
@@ -76,34 +58,30 @@ h3 {
                 justify-content: space-between;
             }
         }
+
+        ul {
+            margin: 0;
+            padding-left: 1rem;
+            list-style-type: none;
+
+            li::before {
+                content: "\276F";
+                color: $primary-color;
+                font-weight: bold;
+                margin-right: 0.5em;
+                margin-left: -1rem;
+            }
+
+            li {
+                padding-bottom: 0.3rem;
+            }
+        }
     }
 }
 
 .carousal-container {
     padding: 10rem 5rem;
     background-color: $secondary-color;
-
-    .content {
-        .custom-carousal {
-            .flickity-page-dots {
-                width: inherit;
-                bottom: 0;
-                left: 0;
-                right: -10rem;
-
-                .dot {
-                    background: $primary-color;
-                }
-            }
-
-            .flickity-button {
-                width: 5rem;
-                height: 5rem;
-                background: transparent;
-                color: $text-color;
-            }
-        }
-    }
 }
 
 .team-container {
@@ -148,15 +126,8 @@ h3 {
         padding: 5rem 2rem 8rem;
 
         .content {
-            .custom-carousal {
-                .flickity-page-dots {
-                    bottom: -3rem;
-                    right: 0rem;
-                }
-
-                .flickity-button {
-                    display: none;
-                }
+            .react-multi-carousel-dot-list {
+                margin-top: -1rem;
             }
         }
     }
@@ -164,17 +135,6 @@ h3 {
     .team-container {
         .content {
             display: none;
-        }
-
-        .mobile-content {
-            .team-carousal {
-                .flickity-page-dots {
-                    bottom: -2.5rem;
-                    .dot {
-                        background: $primary-color;
-                    }
-                }
-            }
         }
     }
 }
@@ -206,10 +166,8 @@ h3 {
         padding: 5rem 3rem;
 
         .content {
-            .custom-carousal {
-                .flickity-button {
-                    display: block;
-                }
+            .react-multi-carousel-dot-list {
+                margin-top: 2rem;
             }
         }
     }
@@ -222,14 +180,6 @@ h3 {
 
     .carousal-container {
         padding: 10rem 5rem;
-
-        .content {
-            .custom-carousal {
-                .flickity-button {
-                    display: block;
-                }
-            }
-        }
     }
 
     .team-container {
@@ -264,13 +214,9 @@ h3 {
 
     .carousal-container {
         .content {
-            .custom-carousal {
-                .flickity-page-dots {
-                    width: inherit;
-                    bottom: 0;
-                    left: 0;
-                    right: -7rem;
-                }
+            .react-multi-carousel-dot-list {
+                left: 10rem;
+                margin-top: -3.5rem;
             }
         }
     }

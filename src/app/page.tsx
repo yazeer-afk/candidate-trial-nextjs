@@ -1,42 +1,21 @@
 import Image from "next/image";
 import Button from "@/components/Button";
-import { FlickityOptions } from "react-flickity-component";
 
 import TeamMember from "@/components/TeamMember";
 import CarousalItem from "@/components/CarousalItem";
 import Slider from "@/components/Slider";
-
 import "./page.scss";
 
 import { getCarousalContent, getTeamContent } from "@/data/getData";
 
 export default async function Home() {
-
     const carousalData = await getCarousalContent();
     const teamData = await getTeamContent();
 
-    const options: FlickityOptions = {
-        wrapAround: true,
-        initialIndex: 1,
-        arrowShape: {
-            x0: 0,
-            x1: 30,
-            y1: 50,
-            x2: 40,
-            y2: 50,
-            x3: 10,
-        },
-    };
-
-    const teampOptions: FlickityOptions = {
-        wrapAround: true,
-        initialIndex: 1,
-        prevNextButtons: false,
-        percentPosition: false,
-    };
-
-    const getCarousal = () => carousalData.map(item => <CarousalItem key={item.id} {...item} />)
-    const getTeam = () => teamData.map(item => <TeamMember key={item.id} {...item} /> )
+    const getCarousal = () =>
+        carousalData.map((item) => <CarousalItem key={item.id} {...item} />);
+    const getTeam = () =>
+        teamData.map((item) => <TeamMember key={item.id} {...item} />);
 
     return (
         <main>
@@ -104,7 +83,15 @@ export default async function Home() {
             <section className="carousal-container">
                 <h2>Carousal section</h2>
                 <div className="content">
-                    <Slider className="custom-carousal" options={options}>
+                    <Slider
+                        removeArrowOnDeviceType={[
+                            "xxs",
+                            "xs",
+                            "sm",
+                            "md",
+                            "lg",
+                        ]}
+                    >
                         {getCarousal()}
                     </Slider>
                 </div>
@@ -112,16 +99,16 @@ export default async function Home() {
 
             <section className="container team-container">
                 <h2>Team section</h2>
-                <div className="content">
-                    {getTeam()}
-                </div>
+                <div className="content">{getTeam()}</div>
                 <div className="mobile-content">
-                    <Slider
-                        className="team-carousal"
-                        options={teampOptions}
-                    >
-                        {getTeam()}
-                    </Slider>
+                    <Slider removeArrowOnDeviceType={[
+                            "xxs",
+                            "xs",
+                            "sm",
+                            "md",
+                            "lg",
+                            "xl"
+                        ]}>{getTeam()}</Slider>
                 </div>
             </section>
         </main>
