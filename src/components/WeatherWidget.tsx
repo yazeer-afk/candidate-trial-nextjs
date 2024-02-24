@@ -20,7 +20,6 @@ const WeatherWidget = (props: WeatherWidgetProps): React.ReactElement => {
     if (!!error) {
         return <></>;
     }
-    console.log(data);
 
     return (
         <>
