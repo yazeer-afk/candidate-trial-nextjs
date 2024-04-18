@@ -1,0 +1,33 @@
+// colors ----------------------------------
+$primary-color: #CCAE92;
+$primary-accent: #EFEAE5; 
+$primary-background: #FAF5F0; 
+
+$secondary-color: #F7F7F7;
+$white-color: #FFFFFF;
+
+$text-color: #4B4F52;
+
+$widget-background: #dfdfdf71;
+
+// font sizes ------------------------------
+$header-text: 3rem;
+$title-text: 2rem;
+$subtitle-text: 1.3rem;
+
+// screen sizes ----------------------------
+$xxs: 360px;
+$xs: 576px;
+$sm: 640px;
+$md: 768px;
+$lg: 992px;
+$xl: 1280px;
+$xxl: 1536px;
+
+:export {
+    primaryColor: $primary-color;
+    primaryBackground: $primary-background;
+    secondaryColor: $secondary-color;
+    whiteColor: $white-color;
+    textColor: $text-color;
+}

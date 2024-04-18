@@ -1,0 +1,223 @@
+@import "../variables.module.scss";
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+h2 {
+    margin-bottom: 3.5rem;
+    text-align: center;
+    font-size: $title-text;
+}
+
+h3 {
+    font-size: $subtitle-text;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 10rem 20rem;
+    line-height: 24px;
+}
+
+.hero-container {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+.column-container {
+    .content {
+        display: flex;
+        align-items: stretch;
+        column-gap: 3rem;
+
+        .slot {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                margin-top: 2rem;
+            }
+
+            &.column-slot {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 1rem;
+            list-style-type: none;
+
+            li::before {
+                content: "\276F";
+                color: $primary-color;
+                font-weight: bold;
+                margin-right: 0.5em;
+                margin-left: -1rem;
+            }
+
+            li {
+                padding-bottom: 0.3rem;
+            }
+        }
+    }
+}
+
+.carousal-container {
+    padding: 10rem 5rem;
+    background-color: $secondary-color;
+}
+
+.team-container {
+    .content {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: $xxs) {
+    .container {
+        padding: 5rem 2rem;
+    }
+
+    .hero-container {
+        background-image: url("/images/hero-image-mobile.png");
+        min-height: 53rem;
+
+        h1 {
+            font-size: $title-text;
+            margin-top: -8rem;
+        }
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .column-container {
+        h2 {
+            text-align: start;
+        }
+
+        .content {
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+    }
+
+    .carousal-container {
+        padding: 5rem 2rem 8rem;
+
+        .content {
+            .react-multi-carousel-dot-list {
+                margin-top: -1rem;
+            }
+        }
+    }
+
+    .team-container {
+        .content {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: $md) {
+    .container {
+        padding: 5rem 10rem;
+    }
+    .hero-container {
+        background-image: url("/images/hero-image.png");
+
+        h1 {
+            font-size: $header-text;
+            margin-top: inherit;
+        }
+    }
+
+    .carousal-container {
+        padding: 5rem 10rem 8rem;
+    }
+}
+
+@media (min-width: $lg) {
+    .hero-container {
+        min-height: 50rem;
+    }
+
+    .carousal-container {
+        padding: 5rem 3rem;
+
+        .content {
+            .react-multi-carousel-dot-list {
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+@media (min-width: $xl) {
+    .container {
+        padding: 10rem 20rem;
+    }
+
+    .carousal-container {
+        padding: 10rem 5rem;
+    }
+
+    .team-container {
+        .content {
+            display: flex;
+        }
+
+        .mobile-content {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: $xxl) {
+    .container {
+        padding: 10rem 20rem;
+    }
+
+    h2 {
+        font-size: $title-text;
+    }
+
+    .column-container {
+        h2 {
+            text-align: center;
+        }
+
+        .content {
+            flex-direction: row;
+        }
+    }
+
+    .carousal-container {
+        .content {
+            .react-multi-carousel-dot-list {
+                left: 10rem;
+                margin-top: -3.5rem;
+            }
+        }
+    }
+}

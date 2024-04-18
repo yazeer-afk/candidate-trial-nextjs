@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "name": "About",
+        "content": [
+            {
+                "contentId": 1,
+                "title": "About Sample links 1",
+                "items": [
+                    "About menu item 1",
+                    "About menu item 2",
+                    "About menu item 3",
+                    "About menu item 4",
+                    "About menu item 5"
+                ]
+            },
+            {
+                "contentId": 2,
+                "title": "About Sample links 2",
+                "items": [
+                    "About menu item 1",
+                    "About menu item 2",
+                    "About menu item 3",
+                    "About menu item 4",
+                    "About menu item 5"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Services",
+        "content": [
+            {
+                "contentId": 1,
+                "title": "Services Sample links 1",
+                "items": [
+                    "Services menu item 1",
+                    "Services menu item 2",
+                    "Services menu item 3",
+                    "Services menu item 4",
+                    "Services menu item 5"
+                ]
+            },
+            {
+                "contentId": 2,
+                "title": "Services Sample links 2",
+                "items": [
+                    "Services menu item 1",
+                    "Services menu item 2",
+                    "Services menu item 3",
+                    "Services menu item 4",
+                    "Services menu item 5"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "FAQs",
+        "content": [
+            {
+                "contentId": 1,
+                "title": "FAQs Sample links 1",
+                "items": [
+                    "FAQs menu item 1",
+                    "FAQs menu item 2",
+                    "FAQs menu item 3",
+                    "FAQs menu item 4",
+                    "FAQs menu item 5"
+                ]
+            },
+            {
+                "contentId": 2,
+                "title": "FAQs Sample links 2",
+                "items": [
+                    "FAQs menu item 1",
+                    "FAQs menu item 2",
+                    "FAQs menu item 3",
+                    "FAQs menu item 4",
+                    "FAQs menu item 5"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "News",
+        "content": [
+            {
+                "contentId": 1,
+                "title": "News Sample links 1",
+                "items": [
+                    "News menu item 1",
+                    "News menu item 2",
+                    "News menu item 3",
+                    "News menu item 4",
+                    "News menu item 5"
+                ]
+            },
+            {
+                "contentId": 2,
+                "title": "News Sample links 2",
+                "items": [
+                    "News menu item 1",
+                    "News menu item 2",
+                    "News menu item 3",
+                    "News menu item 4",
+                    "News menu item 5"
+                ]
+            }
+        ]
+    }
+]
